@@ -1,0 +1,10 @@
+name: build-with-user-predict
+
+on:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    uses: ./.github/workflows/windows-build.yml
+    with:
+      rime_plugins: hchunhui/librime-lua lotem/librime-octagram rime/librime-predict Carlson24/librime-user-predict
